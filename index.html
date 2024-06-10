@@ -1,10 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, world!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 10px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column; /* 세로로 요소들을 배치 */
+        }
+        .container, .additional-box, .another-box {
+            width: 80%; /* 두 박스의 너비를 동일하게 지정 */
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            background-color: #ffe6f2; /* 핑크 계열의 배경색 */
+            margin-bottom: 20px; /* 추가된 여백 */
+        }
+        .additional-box  {
+            background-color: #ffdede; /* 연한 핑크 계열의 배경색 */
+            margin-bottom: 20px; /* 추가된 여백 */
+        }
+        .another-box {
+            background-color: #ffa9a9; /* 연한 핑크 계열의 배경색 */
+            margin-bottom: 20px; /* 추가된 여백 */
+        }
+        h1 {
+            color: #ff8ebb; /* 핑크색 */
+            margin-bottom: 10px;
+        }
+        p {
+            color: #99004d; /* 진한 핑크색 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+        }
+        .additional-box ul, .another-box ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .additional-box li, .another-box li {
+            margin-bottom: 10px;
+        }
+        .additional-box img, .another-box img {
+            max-width: 100%; /* 이미지 크기 제한 */
+            border-radius: 10px;
+        }
+        .button-box {
+            background-color: #ff8ebb; /* 핑크색 */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>Sunhee의 홈페이지에 오신 것을 환영합니다!</p>
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p>Hongdaeun의 홈페이지에 오신 것을 환영합니다!</p>
+    </div>
+    
+    <div class="additional-box">
+        <ul>
+            <li style="color: #ff0066;">이름 : 홍다은</li> <!-- 이름에 색상 적용 -->
+            <li>이메일 주소 : daeun557@dongyang.ac.kr</li>
+            <li>기술 스택 : Visual Studio Code / Python</li>
+            <li>대학 정보 : 동앙미래대학교 컴퓨터소프트웨어공학과 / 2024년 입학</li>
+            <li>기술 개발 경험 : 현재 동아리 can에 들어가서 10월 expo 전시할 작품 프로젝트에 참여할 예정</li>
+            <li>관심 기술 분야 : 웹 페이지 개발 / 게임 개발 / 백엔드 개발</li>
+            <li><img src="minion.jpg" alt="hello"></li>
+        </ul>
+    </div>
+
+    <div class="another-box">
+        <button class="button-box" onclick="handleButtonClick()">버튼</button>
+    </div>
+
+    <script>
+        function handleButtonClick() {
+            console.log("버튼이 클릭되었습니다!");
+            // 여기에 클릭 시 실행할 동작을 추가할 수 있습니다.
+        }
+    </script>
 </body>
 </html>
